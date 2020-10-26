@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+        <meta name="roomName" content="{{roomName}}">
+	    <title>Chatroom: {{roomName}}</title>
+        <link rel="stylesheet" href="http://localhost:8080/css/room.css"/>
+    <script
+    		src="https://code.jquery.com/jquery-3.3.1.js"
+    		integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    		crossorigin="anonymous"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="http://localhost:8080/js/room.js"></script>
+    </head>
+<body>
+    <div id="header">
+        <a id="home" href="/">Leave chat</a>
+        <h1>Chatroom: {{roomName}}</h1>
+        <input type="text" id="link">
+        <button id="share">Share</button>
+    </div>
+    <div id="all">
+        <div id="side_panel">
+            <div id="user_info">
+                <p id="user_tag">Username: </p>
+                <input type="text" id="change_user"/>
+                <p id="user">User</p>
+                <p id="edit">Edit</p>
+            </div>
+            <div id="previous">
+                <div id="prev_active">
+                    <div id="rooms" class="sidebar_tab">
+                        <h3>Previously Active</h3>
+                    </div>
+                    <div id="users" class="sidebar_tab">
+                        <h3>Users</h3>
+                    </div>
+                </div>
+                <ul id="prev_active_list" class="sidebar_list">
+                    <!-- previously active rooms are appended to this list -->
+                </ul>
+                <ul id="active_users_list" class="sidebar_list">
+                    <!-- active users that are in the current room are appended to this list -->
+                </ul>
+            </div>
+        </div>
+        <div id="main_panel">
+            <div id="convo_indicator">
+                <a id="who">Group</a>
+                <a id="return">Return to group</a>
+            </div>
+            <div id="history_box">
+                <ul id="history_list">
+                    <!-- messages sent are appended to this list -->
+                </ul>
+            </div>
+            <div id="messsage_box">
+                <form id="messageForm" name="form">
+                    <input id="message" type="text" placeholder="send message" name="message" autocomplete="off"/>
+                    <button id="submit" type="submit">Send</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+{
+  "name": "realtime",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "any-db": "^2.2.0",
+    "any-db-sqlite3": "^2.1.4",
+    "colors": "^1.2.1",
+    "consolidate": "^0.15.1",
+    "express": "^4.16.3",
+    "hogan.js": "^3.0.2",
+    "http": "0.0.0",
+    "rm-emoji-picker": "^0.3.31",
+    "socket.io": "^2.0.4"
+  }
+}

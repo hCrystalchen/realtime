@@ -1,0 +1,344 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f2e8ef;
+    background-image: url("http://localhost:8080/image/chat_home_bg.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    position:fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+}
+
+#header {
+    display: block;
+    text-align: center;
+    color: #5e3953;
+    margin: 0;
+}
+
+#header * {
+    display: inline;
+}
+
+#all {
+    display:block;
+    height: 85%;
+    margin: 2%;
+}
+
+#side_panel {
+    display: inline-block;
+    height: 100%;
+    width: 30%;
+    vertical-align: top;
+}
+
+#user_info {
+    display: block;
+    height: 6%;
+    width: 100%;
+    background: rgba(255,255,255, 0.6);
+    /*border-radius: 5px;*/
+    padding-top: 5px;
+}
+
+#user_info * {
+    display: inline-block;
+    color: #5e3953;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 6%;
+}
+
+#user_tag {
+    margin-left: 15px;
+}
+
+#user {
+    margin-left: 15px;
+}
+
+#change_user {
+    display: none;
+    margin-left: 15px;
+}
+
+#edit {
+    float: right;
+    margin-right: 15px;
+    color: rgba(211, 167, 198, 1);
+}
+
+#edit:hover {
+    cursor: pointer;
+    color: #5e3953;
+}
+
+#previous {
+    display: block;
+    height: 93.5%;
+    width: 100%;
+    background: rgba(255,255,255, 0.5);
+}
+
+#prev_active {
+    display: block;
+    color: #5e3953;
+    width: 100%;
+}
+
+.sidebar_tab {
+    background: rgba(255,255,255, 0.6);
+    text-align: center;
+    width: 49.5%;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.sidebar_tab:hover {
+     cursor: pointer;
+}
+
+#users {
+    background: rgba(214, 215, 216, 0.6);
+}
+
+.notification {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: middle;
+    background: rgba(159, 133, 198, 0.6);
+    text-align: center;
+    font-size: 14px;
+    line-height: 25px;
+    color: white;
+    float: right;
+}
+
+.active, .idle {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align:middle;
+}
+
+.active {
+    background: rgba(211, 167, 198, 1);
+}
+
+.idle {
+    background: rgba(214, 215, 216, 1);
+}
+
+.name {
+    display: inline-block;
+    margin-left: 15px;
+}
+
+#prev_active h3 {
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#prev_active_list {
+    display: block;
+}
+
+.prev_active_room, .other_user {
+    display: block;
+    text-align: left;
+    background: rgba(255,255,255, 0.6);
+    margin: 3%;
+    height: 30px;
+    line-height: 30px;
+    font-weight: bold;
+    color: #5e3953;
+    border-radius: 5px;
+    padding: 5px 10px 5px 10px;
+}
+
+.sidebar_list {
+    height: 88%;
+    background: rgba(255,255,255, 0.3);
+    color: #5e3953;
+    margin: 3%;
+}
+
+ul {
+    height: 95%;
+    overflow: hidden;
+    overflow-y: auto;
+    list-style: none;
+    padding: 0px;
+}
+
+#main_panel {
+    display: inline-block;
+    width: 69%;
+    height: 100%;
+    background: rgba(214, 160, 198, 0.3);
+    position: relative;
+}
+
+#history_box {
+    display: block;
+    margin: 10px;
+    background: rgba(214, 160, 198, 0.5);
+    width: 97%;
+    height: 85%;
+    padding: 5px;
+}
+
+#convo_indicator {
+    background: rgba(255, 255, 255, 0.3);
+    width: 97%;
+    height: 15px;
+    padding: 5px;
+    margin: 10px;
+}
+
+#convo_indicator * {
+    display: inline-block;
+}
+
+#convo_indicator a {
+    font-weight: bold;
+    font-size: 12px;
+}
+
+#return {
+    color: white;
+    float: right;
+    margin-right: 5px;
+}
+
+#return:hover {
+    cursor: pointer;
+    color:rgb(175, 124, 160);
+}
+
+#who {
+    float: left;
+    margin-left: 5px;
+    color: #5e3953;
+}
+
+#messsage_box {
+    display: block;
+    height: 35px;
+    width: 98%;
+    padding: 10px;
+    vertical-align: baseline;
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+}
+
+#message {
+    width: 91%;
+}
+
+input[type=text], textarea {
+    outline: none;
+    box-shadow: none;
+    border: 5px solid white;
+    padding: 3px;
+    height: 20px;
+}
+
+input[type=text]:focus, textarea:focus {
+    outline: none;
+    box-shadow: none;
+    border: 5px solid white;
+    padding: 3px;
+    height: 20px;
+}
+
+#submit {
+    color: white;
+    background: rgba(175, 124, 160, 0.8);
+    border: none;
+    padding: 10px 1.5% 10px 1.5%;
+    border-radius: 5px;
+}
+
+#home:hover, #share:hover, #submit:hover, .prev_active_room:hover {
+    background: rgba(211, 167, 198, 1);
+    cursor: pointer;
+}
+
+.other_user:hover {
+    background: rgba(211, 167, 198, 0.5);
+    cursor: pointer;
+}
+
+#home, #share {
+    color: white;
+    padding: 10px 20px 10px 20px;
+    background: rgba(175, 124, 160, 0.8);
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+#home {
+    float: left;
+    margin-left: 2%;
+}
+
+#link {
+    height: 0px;
+    width: 0px;
+    float: right;
+    margin: 0px;
+    opacity: 0;
+}
+
+#link:hover {
+    cursor: default;
+}
+#share {
+    float: right;
+    margin-right: 2%;
+}
+.message_content {
+    background: rgba(255,255,255, 0.6);
+    margin: 0;
+    border-radius: 5px;
+    padding: 5px 10px 5px 10px;
+}
+
+.message_content * {
+    margin-bottom: 5px;
+}
+
+.error {
+    color: red;
+}
+
+.message_header * {
+    display: inline-block;
+    color: #5e3953;
+}
+
+.message_header p {
+    float: right;
+    font-size: 10px;
+}
+
+li {
+    margin: 5px;
+}
+
+li * {
+    margin: 0;
+}
